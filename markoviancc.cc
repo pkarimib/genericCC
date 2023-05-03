@@ -184,7 +184,7 @@ void MarkovianCC::update_intersend_time() {
     if (update_amt > _the_window * delta) {
       update_amt /= 2;
     }
-    update_amt = max(update_amt, 1.);
+    update_amt = 1.0; //max(update_amt, 1.);
     ++ pkts_per_rtt;
 
     if (_the_window < target_window) {
